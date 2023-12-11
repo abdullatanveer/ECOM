@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  position: static;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #2e2d2d;
+  padding: 1rem;
+  background:#ffffff;
+  opacity: 0.9;
+   /* Set the background to transparent */
+  z-index: 2; /* Set a higher z-index to make the header appear above the content */
+  height: auto;
+}
+
+.navbar-logo {
+  font-size: 2rem;
+  color: #0c8510;
+  font-size:2rem;
+  text-decoration: none;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.navbar-link {
+  margin-left: 1rem;
+}
+
+.navbar-link a {
+  color:#2e2d2d;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  justify-content: center;
+  
+}
+
+.navbar-link a:hover {
+  background-color:#0c8510;
+  color:#fff
+}
+.cart-link {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+  position: relative;
+}
+.CartQuantity {
+  background-color: #f44336; /* Red color for the quantity bubble */
+  color: #fff;
+  font-size: 12px;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  margin-top: 20px;
+  margin-left: 10px; 
+  /* margin-bottom: 5px; */
+}
+
+.speedDail{
+  position:fixed;
+  top:6vmax;
+   
+  right:2vmax;
+}
+.speedDialIcon{
+  border-radius: 100%;
+  width:58px;
+  height:58px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    height:0.3vh;
+  }
+
+  .navbar-links {
+    margin-top: 1rem;
+  }
+
+  .navbar-link {
+    margin: 0;
+    margin-bottom: 0.5rem;
+  }
+}

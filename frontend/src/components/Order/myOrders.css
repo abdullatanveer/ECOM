@@ -1,0 +1,131 @@
+.myOrdersPage {
+    width: 110vw;
+    max-width: 100%;
+    padding: 0 7vmax;
+    box-sizing: border-box;
+    background-color: rgb(235, 235, 235);
+    position: absolute;
+    top: 12vh;
+    left: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+    
+  }
+  
+ #myOrdersHeading {
+    text-align: center;
+    font: 400 1.2vmax "Roboto";
+    padding: 1vmax;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    transition: all 0.5s;
+    background-color: rgb(44, 44, 44);
+  }
+  
+  .myOrdersTable {
+    background-color: white;
+  }
+  
+  .myOrdersTable div {
+    font: 300 1vmax "Roboto";
+    color: rgba(0, 0, 0, 0.678);
+    border: none;
+  }
+  
+  .myOrdersTable a {
+    color: rgba(0, 0, 0, 0.527);
+    transition: all 0.5s;
+  }
+  
+  .myOrdersTable a:hover {
+    color: tomato;
+  }
+  
+  .MuiDataGrid-columnHeader {
+    background-color: rgb(88, 221, 88);
+    padding: 1vmax !important;
+  }
+  
+  .MuiDataGrid-columnHeader div {
+    color: rgb(255, 255, 255);
+    font: 500 1.1vmax "Roboto" !important;
+  }
+  
+  .MuiDataGrid-iconSeparator {
+    display: none !important;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .myOrdersPage {
+      padding: 0;
+      height: 93vh;
+    }
+  
+    #myOrdersHeading {
+      font: 400 2.2vmax "Roboto";
+      padding: 4vw;
+    }
+  
+    .myOrdersTable div {
+      font: 300 4vw "Roboto";
+    }
+  
+    .MuiDataGrid-columnHeader {
+      padding: 20px !important;
+    }
+  
+    .MuiDataGrid-columnHeader div {
+      font: 500 5vw "Roboto" !important;
+    }
+  }
+  
+
+ 
+
+/* Center the table and heading */
+/* .myOrdersPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin-top: 80px;
+}
+
+/* Add space around the table */
+/* .myOrdersTable {
+  margin-top: 20px;
+  width: 80%; /* Adjust the width as needed */
+/* } */
+
+/* Style the table header */
+/* .MuiDataGrid-colCellTitle {
+  font-weight: bold;
+} */
+
+/* Style the status cells */
+/* .greenColor {
+  color: green;
+}
+
+.redColor {
+  color: red;
+}
+
+/* Style the link icon */
+/* .MuiSvgIcon-root {
+  font-size: 1.2rem;
+  color: #007bff; /* Adjust the color as needed */
+  /* transition: color 0.3s ease;
+}
+
+.MuiSvgIcon-root:hover {
+  color: #0056b3; /* Adjust the hover color as needed */
+/* }
+
+/* Style the heading */
+/* #myOrdersHeading {
+  font-size: 1.5rem;
+  margin-top: 20px;
+}   */ 
