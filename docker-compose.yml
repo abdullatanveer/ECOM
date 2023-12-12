@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3001"  # Map container's port 3001 to host's port 3001
+    depends_on:
+      - database  # Wait for the database container to start before starting the backend
+    environment:
+      MONGO_URI: mongodb://database:27017/Ecommerce-Store  # MongoDB connection URL
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"  # Map container's port 3000 to host's port 3000
+    depends_on:
+      - backend 
+
+  database:
+    image: mongo
+    ports:
+      - "27017:27017"  # Map container's port 27017 to host's port 27017
+    volumes:
+      - mongo_data:/data/db  # Persist MongoDB data
+
+volumes:
+  mongo_data:  # Define a named volume for MongoDB data persistence
