@@ -1,6 +1,11 @@
 pipeline {
     agent any
     stages {
+        stage('Preparation') {
+            steps {
+                cleanWs()
+           }
+    }
         stage('Checkout') {
             steps {
                 checkout scm
